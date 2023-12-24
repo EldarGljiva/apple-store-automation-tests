@@ -5,6 +5,14 @@
   },
   "data": {
     "info": "AirPods",
-    "zipCode": "71000"
+    "zipCode": "90001",
+    "firstName": "Burch",
+    "lastName": "Student",
+    "address": "789 Oak Avenue",
+    "street": "123 Main Street",
+    "city": "Los Angeles",
+    "state": "CA",
+    "email": "eldargljiva.eg@gmail.com",
+    "phoneNumber": "(328) 948-2309"
   }
 }
