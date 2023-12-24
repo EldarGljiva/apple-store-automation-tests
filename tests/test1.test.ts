@@ -13,10 +13,11 @@ let homePage: HomePage;
 beforeAll(async () => {
   driver = await createDriver(testData.url.home_page);
   homePage = new HomePage(driver);
-}, 10000);
+}, 20000);
 
-test("apple store testing", async () => {
-  await homePage.showProductPage();
+test("selecting item section from navBar", async () => {
+  await homePage.enterProductPage();
+  await driver.sleep(2000);
 });
 
 afterAll(async () => {

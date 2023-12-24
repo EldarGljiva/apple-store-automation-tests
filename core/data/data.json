@@ -1,8 +1,10 @@
 {
   "url": {
-    "home_page": "https://www.apple.com/store"
+    "home_page": "https://www.apple.com/store",
+    "step_back": "https://secure5.store.apple.com/shop/checkout?_s=Fulfillment-init"
   },
   "data": {
-    "info": "iPhone"
+    "info": "AirPods",
+    "zipCode": "71000"
   }
 }
