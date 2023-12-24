@@ -12,7 +12,7 @@
 
 ## How to run
 - Make sure you have Git installed. If not, install it from [Git](https://git-scm.com/downloads).
-- Open Git Bash and type: `git clone "github_repository_url"` (Replace "github_repository_url" with the actual URL of your GitHub repository).
+- Open Git Bash and type: `git clone "github_repository_url"` (Replace "github_repository_url" with the actual URL of the GitHub repository).
 - Navigate to the project directory in your terminal.
 - Type `npm install` to install the necessary dependencies.
 Change into the "tests" directory by typing `cd tests`.
