@@ -25,15 +25,15 @@ export default class BasePage {
     expect(title).toMatch(page_title);
   }
   async findElementAndClick(selector: By) {
-    await this.driver.wait(until.elementLocated(selector), 10000).click();
+    await this.driver.wait(until.elementLocated(selector), 30000).click();
   }
   async waitAndClick(elementLocator, timeout) {
     await this.driver
       .wait(until.elementLocated(elementLocator), timeout)
       .click();
   }
-  async waitForElement(elementLocator, timeout) {
-    return this.driver.wait(until.elementLocated(elementLocator), timeout);
+  async waitForElement(locator: By) {
+    await this.driver.wait(until.elementLocated(locator), 10000);
   }
   async hoverElement(element: WebElement) {
     const actions = this.driver.actions({ bridge: true });

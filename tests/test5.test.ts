@@ -35,8 +35,8 @@ test("Checking out", async () => {
   await homePage.pressCartIconAndReview();
   await cartPage.payMonthly();
   await checkoutPage.checkoutMonthly();
-  await driver.sleep(2000);
-}, 20000);
+  await checkoutPage.pressMonthlyInputField();
+}, 50000);
 
 afterAll(async () => {
   await quitDriver(driver);

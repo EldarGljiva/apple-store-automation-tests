@@ -36,9 +36,7 @@ test("Checking out", async () => {
   await cartPage.payInFull();
   await checkoutPage.checkoutInFull();
   await checkoutPage.toBeDelieveredOne();
-  await checkoutPage.enterZipCode();
-  await checkoutPage.applyZipCode();
-  await checkoutPage.continueShopping();
+  await checkoutPage.selectPickMyself();
   await driver.sleep(3000);
 }, 50000);
 

@@ -35,7 +35,7 @@ test("Checking out", async () => {
   await homePage.pressCartIconAndReview();
   await cartPage.payInFull();
   await checkoutPage.checkoutInFull();
-  await driver.sleep(4000);
+  await checkoutPage.enterZipCode();
 }, 20000);
 
 afterAll(async () => {

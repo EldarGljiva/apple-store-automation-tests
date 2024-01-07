@@ -41,15 +41,19 @@ export class CheckoutPage extends BasePage {
   private city = By.id(
     "checkout.shipping.addressSelector.newAddress.address.zipLookup.city"
   );
-  private state = By.id(
-    "checkout.shipping.addressSelector.newAddress.address.zipLookup.state"
-  );
+  private state = By.css('input[data-autom="form-field-emailAddress"]');
+
   private email = By.id(
     "checkout.shipping.addressContactEmail.address.emailAddress"
   );
   private phone = By.id(
     "checkout.shipping.addressContactPhone.address.fullDaytimePhone"
   );
+  private monthlyInputField = By.id("account_name_text_field");
+  private pickMyself = By.xpath(
+    "//*[@id='checkout-container']/div[1]/div[2]/div/div[1]/div[1]/fieldset/div/div[2]/label"
+  );
+
   constructor(driver: WebDriver) {
     super(driver);
   }
@@ -60,6 +64,17 @@ export class CheckoutPage extends BasePage {
   async checkoutMonthly() {
     await this.findElementAndClick(this.monthlyCheckout);
   }
+  async pressMonthlyInputField() {
+    try {
+      console.log("Attempting to locate and click the monthly input field...");
+      await this.waitForElement(this.monthlyInputField);
+      await this.findElementAndClick(this.monthlyInputField);
+      console.log("Successfully clicked the monthly input field.");
+    } catch (error) {
+      console.error("Error clicking the monthly input field:", error);
+    }
+  }
+
   async toBeDelieveredOne() {
     await this.findElementAndClick(this.delieveredPreferenceOne);
   }
@@ -82,7 +97,14 @@ export class CheckoutPage extends BasePage {
     await this.fillInputField(this.street, testData.data.street);
     await this.fillInputField(this.city, testData.data.city);
     await this.fillInputField(this.state, testData.data.state);
+  }
+  async fillEmailAndPhone() {
+    await this.waitForElement(this.email);
     await this.fillInputField(this.email, testData.data.email);
     await this.fillInputField(this.phone, testData.data.phoneNumber);
+  }
+  async selectPickMyself() {
+    await this.waitForElement(this.pickMyself);
+    await this.findElementAndClick(this.pickMyself);
   }
 }

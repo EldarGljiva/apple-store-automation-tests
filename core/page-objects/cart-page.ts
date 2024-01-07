@@ -9,9 +9,8 @@ const dataFilePath = path.resolve(__dirname, "../data/data.json");
 const testData = JSON.parse(readFileSync(dataFilePath, "utf8"));
 
 export class CartPage extends BasePage {
-  private removeButton = By.id(
-    "shoppingCart.items.item-c28547aa-0501-4395-9f72-ee2590bafe6d.delete"
-  );
+  private removeButton = By.css('button[data-autom="bag-item-remove-button"]');
+
   private payButton = By.id("cart-actions-installmentCheckout");
 
   private payButtonFull = By.id("shoppingCart.actions.checkout");

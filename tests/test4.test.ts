@@ -28,8 +28,7 @@ test("Removing item from cart", async () => {
   await productPage.addToCart();
   await driver.get(testData.url.home_page);
   await homePage.pressCartIconAndReview();
-  await cartPage.removeItemFromCart(); //doesn't work
-  await await driver.sleep(2000);
+  await cartPage.removeItemFromCart();
 }, 20000);
 
 afterAll(async () => {

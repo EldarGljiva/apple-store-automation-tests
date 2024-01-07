@@ -17,7 +17,6 @@ beforeAll(async () => {
 
 test("search bar testing", async () => {
   await homePage.searchProduct();
-  await driver.sleep(2000);
 }, 20000);
 
 afterAll(async () => {
