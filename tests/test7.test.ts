@@ -25,7 +25,7 @@ beforeAll(async () => {
   checkoutPage = new CheckoutPage(driver);
 }, 20000);
 
-test("Checking out", async () => {
+test("Apple Store Shipping Options and Preferences", async () => {
   //Add Item to cart first
   await homePage.searchProduct();
   await productPage.clickBuyProduct();

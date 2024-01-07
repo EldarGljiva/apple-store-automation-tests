@@ -25,7 +25,7 @@ beforeAll(async () => {
   checkoutPage = new CheckoutPage(driver);
 }, 20000);
 
-test("Checking out", async () => {
+test("Replacement of Item exists in India", async () => {
   //Add Item to cart first
   await homePage.searchProduct();
   await productPage.clickSupport();

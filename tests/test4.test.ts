@@ -22,7 +22,7 @@ beforeAll(async () => {
   cartPage = new CartPage(driver);
 }, 20000);
 
-test("Removing item from cart", async () => {
+test("Cart Managment", async () => {
   await homePage.searchProduct();
   await productPage.clickBuyProduct();
   await productPage.addToCart();

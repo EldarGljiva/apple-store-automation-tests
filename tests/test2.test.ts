@@ -15,7 +15,7 @@ beforeAll(async () => {
   homePage = new HomePage(driver);
 }, 10000);
 
-test("search bar testing", async () => {
+test("Product Search", async () => {
   await homePage.searchProduct();
 }, 20000);
 

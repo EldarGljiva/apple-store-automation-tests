@@ -18,7 +18,7 @@ beforeAll(async () => {
   productPage = new ProductPage(driver);
 }, 20000);
 
-test("Adding item to cart", async () => {
+test("Add to Cart", async () => {
   await homePage.searchProduct();
   await productPage.clickBuyProduct();
   await productPage.addToCart();

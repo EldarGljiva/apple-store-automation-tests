@@ -15,7 +15,7 @@ beforeAll(async () => {
   homePage = new HomePage(driver);
 }, 20000);
 
-test("selecting item section from navBar", async () => {
+test("Product Details", async () => {
   await homePage.enterProductPage();
   await driver.sleep(2000);
 });

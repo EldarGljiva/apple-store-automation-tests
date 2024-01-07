@@ -25,7 +25,7 @@ beforeAll(async () => {
   checkoutPage = new CheckoutPage(driver);
 }, 20000);
 
-test("Checking out", async () => {
+test("Item Support Page", async () => {
   await homePage.searchProduct();
   await productPage.clickSupport();
   await productPage.pressReplaceLink();

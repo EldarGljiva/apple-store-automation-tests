@@ -25,7 +25,7 @@ beforeAll(async () => {
   checkoutPage = new CheckoutPage(driver);
 }, 20000);
 
-test("Checking out", async () => {
+test("Guest checkout Regression Test", async () => {
   //Add Item to cart first
   await homePage.searchProduct();
   await productPage.clickBuyProduct();
